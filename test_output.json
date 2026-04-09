@@ -1,0 +1,302 @@
+[
+    {
+        "cv_project_name": "Advanced Traffic Simulation Wrapper (SUMO)",
+        "username": "kaanbabaa",
+        "repo_name": "SUMO",
+        "branch": "milestone2",
+        "fetched_data": {
+            "readme": "#  Advanced Traffic Simulation Wrapper (SUMO)\n\nA robust, Object-Oriented Java wrapper built around the SUMO (Simulation of Urban MObility) engine. This project bridges a heavy, C++ based traffic simulation environment with a responsive Java backend and GUI, showcasing advanced software engineering principles.\n\n##  Engineering Highlights\n\nBuilding a wrapper for a complex external engine requires more than basic coding. This project demonstrates enterprise-level Java capabilities:\n\n* **Multi-Threading & Asynchronous Execution:** A common pitfall in simulation software is UI freezing. I engineered a multi-threaded architecture where the heavy simulation loop runs asynchronously in the background. This guarantees that the dynamic GUI remains fully responsive and updates real-time traffic data without bottlenecking the main thread.\n* **Strict Object-Oriented Design (OOP):** The entire wrapper is built on solid OOP principles (Encapsulation, Abstraction, and Polymorphism). It provides a clean, modular Java API to interact with the underlying SUMO engine, making the codebase scalable and easy to maintain.\n* **Custom String Parsing & Data Extraction:** SUMO generates massive amounts of raw, text-based routing data. I implemented a custom parsing logic to programmatically extract and process specific network elements (such as auxiliary edges / 'hilfskanten' prefixed with `:`) directly from the engine's output, converting raw text logs into actionable Java objects.\n* **Dynamic GUI Integration:** Developed a real-time graphical interface to visualize traffic flow and engine states, tightly coupled with the backend threads for seamless data rendering.\n\n## Tech Stack\n* **Language:** Java (Advanced OOP)\n* **Concurrency:** Java Multi-threading (Runnables, Background Tasks)\n* **Simulation Engine:** SUMO (Simulation of Urban MObility)\n* **Data Processing:** Custom Text/String Parsing Algorithms\n\n##  About the Developer\nI am Kaan Degirmenci, a Computer Science student focused on System Architecture and Backend Development. This project reflects my ability to design scalable, concurrent Java applications that interact seamlessly with complex, external software ecosystems.\n",
+            "dependencies": {},
+            "source_codes": {
+                "src/exceptions/FlowClassException.java": [
+                    "Method: FlowClassException()",
+                    "Class: FlowClassException"
+                ],
+                "src/exceptions/RouteClassException.java": [
+                    "Class: RouteClassException",
+                    "Method: RouteClassException()"
+                ],
+                "src/exceptions/SimulationManagerException.java": [
+                    "Method: SimulationManagerException()",
+                    "Class: SimulationManagerException"
+                ],
+                "src/exceptions/TrafficLightException.java": [
+                    "Class: TrafficLightException",
+                    "Method: TrafficLightException()"
+                ],
+                "src/exceptions/VehicleClassException.java": [
+                    "Class: VehicleClassException",
+                    "Method: VehicleClassException()"
+                ],
+                "src/gui/MainFrame.java": [
+                    "Method: closeSimulationThread()",
+                    "Method: initCurrentSpeedMap()",
+                    "Method: windowClosing()",
+                    "Method: openChangeLightDialog()",
+                    "Method: openAddVehicleDialog()",
+                    "Method: initialize()",
+                    "Method: openFilterDialog()",
+                    "Method: initTlActions()",
+                    "Method: openTriggerFlowDialog()",
+                    "Method: initVehType()",
+                    "Method: MainFrame()",
+                    "Method: openStressTestDialog()",
+                    "Method: setVisible()",
+                    "Method: ActionListener()",
+                    "Method: actionPerformed()",
+                    "Method: toggleSimulationState()",
+                    "Method: startSimulationThread()",
+                    "Method: WindowAdapter()",
+                    "Class: MainFrame"
+                ],
+                "src/gui/MapPanel.java": [
+                    "Method: drawVehiclesAndLights()",
+                    "Method: reloadStaticMap()",
+                    "Method: MouseAdapter()",
+                    "Method: applyFilters()",
+                    "Method: renderStaticMap()",
+                    "Method: paintComponent()",
+                    "Method: MapPanel()",
+                    "Method: mouseWheelMoved()",
+                    "Class: MapPanel",
+                    "Method: MouseWheelListener()",
+                    "Method: mousePressed()",
+                    "Method: mouseDragged()"
+                ],
+                "src/main/MainApp.java": [
+                    "Method: run()",
+                    "Method: main()",
+                    "Method: Runnable()",
+                    "Class: MainApp"
+                ],
+                "src/mod/Flow.java": [
+                    "Method: Flow()",
+                    "Method: injectBatch()",
+                    "Class: Flow"
+                ],
+                "src/mod/Route.java": [
+                    "Class: Route",
+                    "Method: getRepeat()",
+                    "Method: getLength()",
+                    "Method: getColor()",
+                    "Method: setColor()",
+                    "Method: Route()",
+                    "Method: getId()",
+                    "Method: getEdges()"
+                ],
+                "src/mod/SumoPolygon.java": [
+                    "Method: getShape()",
+                    "Method: getColor()",
+                    "Class: SumoPolygon",
+                    "Method: isFilled()",
+                    "Method: SumoPolygon()"
+                ],
+                "src/mod/TrafficLight.java": [
+                    "Method: switchToNextRed()",
+                    "Method: getProgramDefinition()",
+                    "Method: setPhase()",
+                    "Method: SignalPoint()",
+                    "Method: switchToNextYellow()",
+                    "Method: calculateCharRepeat()",
+                    "Method: getSignalPoint()",
+                    "Class: SignalPoint",
+                    "Method: isLaneInGreenState()",
+                    "Method: getId()",
+                    "Method: updateState()",
+                    "Method: switchToNextGreen()",
+                    "Method: getCurrentPhase()",
+                    "Method: getColorForSignal()",
+                    "Class: TrafficLight",
+                    "Method: getY()",
+                    "Method: isRedPhase()",
+                    "Method: isYellowPhase()",
+                    "Method: analyzePhases()",
+                    "Method: setPhaseDuration()",
+                    "Method: getPhaseColor()",
+                    "Method: getCurrentProgram()",
+                    "Method: getGreenPhaseForLane()",
+                    "Method: isGreenPhase()",
+                    "Method: getPhaseDuration()",
+                    "Method: getGuiId()",
+                    "Method: calculateSignalPoint()",
+                    "Method: TrafficLight()",
+                    "Method: getX()",
+                    "Method: getMostCongestedLane()"
+                ],
+                "src/mod/Vehicle.java": [
+                    "Method: updateTelemetry()",
+                    "Class: Vehicle",
+                    "Method: getColor()",
+                    "Method: getRouteId()",
+                    "Method: setColor()",
+                    "Method: Vehicle()",
+                    "Method: currentLocation()",
+                    "Method: getId()",
+                    "Method: getcurrentSpeed()",
+                    "Method: getVehicleType()",
+                    "Method: setSpeed()"
+                ],
+                "src/reporting/CsvReportGenerator.java": [
+                    "Method: writeVehicleData()",
+                    "Method: writeTrafficLightData()",
+                    "Method: close()",
+                    "Method: CsvReportGenerator()",
+                    "Class: CsvReportGenerator"
+                ],
+                "src/simulation/SimulationManager.java": [
+                    "Method: calculateMapBounds()",
+                    "Class: SimulationManager",
+                    "Method: importTrafficLights()",
+                    "Method: setPhase()",
+                    "Method: createRandomVehicle()",
+                    "Method: setColor()",
+                    "Method: SimulationManager()",
+                    "Method: getActiveLights()",
+                    "Method: getActiveRoutes()",
+                    "Method: getLaneShapes()",
+                    "Method: setSpeed()",
+                    "Method: startSimulation()",
+                    "Method: getMinY()",
+                    "Method: switchTrafficLightToRed()",
+                    "Method: loadAllEdges()",
+                    "Method: getMaxX()",
+                    "Method: switchTrafficLightToGreen()",
+                    "Method: importPolygons()",
+                    "Method: getRoute()",
+                    "Method: getMaxY()",
+                    "Method: createAndGetRoute()",
+                    "Method: addVehicle()",
+                    "Method: importRoadNetwork()",
+                    "Method: getMinX()",
+                    "Method: setPhaseDuration()",
+                    "Method: startStressTest()",
+                    "Method: runStep()",
+                    "Method: createDynamicRoute()",
+                    "Method: getMapPolygons()",
+                    "Method: getTlProgramDefinition()",
+                    "Method: createRandomAutonomousRoute()",
+                    "Method: triggerFlow()",
+                    "Method: getActiveVehicles()",
+                    "Method: importRoutes()",
+                    "Method: closeSimulation()"
+                ],
+                "src/simulation/SimulationThread.java": [
+                    "Method: stopSimulation()",
+                    "Method: SimulationThread()",
+                    "Method: run()",
+                    "Class: SimulationThread",
+                    "Method: Runnable()"
+                ],
+                "src/utils/Colors.java": [
+                    "Method: getRandomColor()",
+                    "Class: Colors"
+                ]
+            }
+        }
+    },
+    {
+        "cv_project_name": "Smart Trash Bin – IoT System",
+        "username": "kaanbabaa",
+        "repo_name": "Smart-Waste-Bin-IoT",
+        "branch": "main",
+        "fetched_data": {
+            "readme": "# Autonomous IoT Smart Bin: Embedded C++ & Cloud Architecture\n\nAn end-to-end IoT solution that bridges physical hardware with real-time cloud infrastructure. Built with C++ on an ESP8266, this project focuses on robust sensor data processing, fault tolerance, and optimized cloud communication.\n\n## Engineering Highlights\n\nWhile reading an ultrasonic sensor is trivial, building a reliable, autonomous system is not. This project implements several advanced embedded software concepts:\n\n* **Algorithmic Signal Smoothing:** Ultrasonic sensors (HC-SR04) often return noisy or anomalous data. I implemented a custom `getAverageDistance()` function that acts as a low-pass filter, rejecting outliers (measurements deviating >20% from the baseline) to ensure absolute data accuracy.\n* **Dynamic Auto-Calibration:** Upon boot, the system dynamically measures and calibrates its total depth (`initDistance`), making the codebase hardware-agnostic and adaptable to any bin size without hardcoding values.\n* **Bandwidth & Power Optimization:** Instead of continuously blasting data to the cloud, the system uses delta-based updates. It pushes JSON payloads to Firebase only if the fill level changes significantly (≥5%), or upon a defined timeout, drastically reducing API calls.\n* **Two-Way Asynchronous Communication:** * **Upstream:** Pushes real-time fill percentages, lid-open counters, and timestamp data to Firebase.\n  * **Downstream:** Listens for remote commands (e.g., \"MEASURE\" via web dashboard) to trigger on-demand hardware interruptions.\n* **Secure Webhooks:** Utilizes `WiFiClientSecure` to trigger Google Apps Script APIs for automated email notifications when critical capacity (80%) is reached.\n\n##  Tech Stack\n* **Hardware:** ESP8266 Microcontroller, HC-SR04 Ultrasonic Sensor.\n* **Language:**  C++\n* **Cloud & DB:** Google Firebase (Realtime Database), JSON Data Structuring.\n* **Networking:** 802.11 Wi-Fi, Secure HTTP (HTTPS) Requests, Webhooks.\n\n##  About the Developer\nI am Kaan Degirmenci, a Computer Science student with a strong passion for System Architecture. This project showcases my ability to write clean, memory-efficient C++ code for low-level hardware while seamlessly integrating it into high-level cloud architectures.\n",
+            "dependencies": {},
+            "source_codes": {
+                "IoTcode.ino": [
+                    "Method: sendEmailNotification()",
+                    "Method: loop()",
+                    "Method: getAverageDistance()",
+                    "Method: updateLedStatus()",
+                    "Method: measureHeight()",
+                    "Method: setup()",
+                    "Method: calculatePercent()",
+                    "Method: sendLidIncrement()"
+                ]
+            }
+        }
+    },
+    {
+        "cv_project_name": "AI-Powered CV Assistant (RAG Application)",
+        "username": "kaanbabaa",
+        "repo_name": "ai-cv",
+        "branch": "main",
+        "fetched_data": {
+            "readme": "#  Digital Intern: Multi-Agent RAG CV Assistant\n\nAn advanced, production-ready AI Assistant built with Python and Streamlit. This project serves as an interactive, AI-powered portfolio, utilizing a custom **Multi-Agent Architecture** to answer questions based on my CV data with zero hallucinations.\n\n##  Engineering Highlights & Architecture\n\nStandard LLM wrappers suffer from hallucinations and API rate limits. To solve these enterprise-level problems, I implemented several advanced software engineering patterns:\n\n* **Multi-Agent \"Council\" Mode (Ensemble Logic):** I designed a two-step LLM pipeline to ensure 100% factual accuracy. \n  1. **The Visionary Agent (High Temp):** Generates a creative, enthusiastic draft based on the user's query.\n  2. **The Auditor Agent (Low Temp):** Acts as a strict fact-checker. It cross-references the draft strictly against the underlying JSON Knowledge Base (my CV) to strip out hallucinations before outputting the final response.\n* **API Load Balancing & Fault Tolerance:** The backend features a custom `smart_generate()` function with a Round-Robin API key rotator. This dynamically switches between multiple API keys to bypass Rate Limits (429 Errors) and implements fallback logic if a model's resources are exhausted.\n* **State Management & Traceability:** Utilized Streamlit's `session_state` to maintain seamless conversation history and built a \"Decision Trace\" UI that logs the exact inputs and outputs of both the Visionary and Auditor agents for full transparency.\n* **Data Layer (JSON Document Store):** Centralized all CV data into a structured JSON format, simulating a vector/document database for Retrieval-Augmented Generation (RAG) operations.\n* **Dynamic UI & Analytics:** Includes an \"Architect View\" for debugging, real-time Plotly charts for skill distribution, and a built-in Cover Letter Generator tailored to specific job descriptions.\n\n##  Tech Stack\n* **Language:** Python\n* **AI/LLM:** Google Generative AI API (Gemini Flash & Flash-Lite)\n* **Frontend/Framework:** Streamlit\n* **Data Handling & Visualization:** JSON, Pandas, Plotly Express\n\n##  About the Developer\nI am Kaan Degirmenci, a Computer Science student transitioning from standard coding to System Architecture and AI Engineering. This project demonstrates my ability to build resilient, logical, and user-centric Artificial Intelligence applications that solve real-world reliability issues.\n",
+            "dependencies": {
+                "requirements.txt": "streamlit\ngoogle-generativeai\npandas\nplotly"
+            },
+            "source_codes": {
+                "IoTcode/IoTcode.ino": [
+                    "Method: sendEmailNotification()",
+                    "Method: loop()",
+                    "Method: getAverageDistance()",
+                    "Method: updateLedStatus()",
+                    "Method: measureHeight()",
+                    "Method: setup()",
+                    "Method: calculatePercent()",
+                    "Method: sendLidIncrement()"
+                ],
+                "SimulationManager.java": [
+                    "Method: calculateMapBounds()",
+                    "Class: SimulationManager",
+                    "Method: importCsPolygons()",
+                    "Method: importTrafficLights()",
+                    "Method: setPhase()",
+                    "Method: setColor()",
+                    "Method: getActiveLights()",
+                    "Method: SimulationManager()",
+                    "Method: createRandomVehicle()",
+                    "Method: getLaneShapes()",
+                    "Method: getActiveRoutes()",
+                    "Method: setSpeed()",
+                    "Method: startSimulation()",
+                    "Method: getMinY()",
+                    "Method: loadAllEdges()",
+                    "Method: importPolygons()",
+                    "Method: getMaxX()",
+                    "Method: switchTrafficLightToRed()",
+                    "Method: switchTrafficLightToGreen()",
+                    "Method: getRoute()",
+                    "Method: getMaxY()",
+                    "Method: createAndGetRoute()",
+                    "Method: addVehicle()",
+                    "Method: importRoadNetwork()",
+                    "Method: getMinX()",
+                    "Method: setPhaseDuration()",
+                    "Method: startStressTest()",
+                    "Method: runStep()",
+                    "Method: createDynamicRoute()",
+                    "Method: getMapPolygons()",
+                    "Method: getTlProgramDefinition()",
+                    "Method: createRandomAutonomousRoute()",
+                    "Method: triggerFlow()",
+                    "Method: getActiveVehicles()",
+                    "Method: importRoutes()",
+                    "Method: closeSimulation()",
+                    "Method: getParkingAreaPolygons()"
+                ],
+                "app.py": [
+                    "Function: update_trace_display()",
+                    "Function: process_council_interaction()",
+                    "Function: handle_click()",
+                    "Function: load_source_code()",
+                    "Function: plot_skills()",
+                    "Function: smart_generate()",
+                    "Function: get_or_create_chat_window()",
+                    "Function: get_random_key()"
+                ],
+                "app_display.py": [
+                    "Function: update_trace_display()",
+                    "Function: process_council_interaction()",
+                    "Function: handle_click()",
+                    "Function: load_source_code()",
+                    "Function: plot_skills()",
+                    "Function: smart_generate()",
+                    "Function: get_or_create_chat_window()",
+                    "Function: get_random_key()"
+                ]
+            }
+        }
+    }
+]
