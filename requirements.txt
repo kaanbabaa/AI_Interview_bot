@@ -1,9 +1,10 @@
 streamlit
 streamlit-ace
 groq
-chromadb
-pydantic
+chromadb==0.4.24
+pydantic==2.6.1
 requests
 python-dotenv
 pymupdf
 sentence-transformers
+protobuf==4.25.3
