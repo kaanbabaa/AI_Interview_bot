@@ -1,0 +1,9 @@
+streamlit
+streamlit-ace
+groq
+chromadb
+pydantic
+requests
+python-dotenv
+pymupdf
+sentence-transformers
