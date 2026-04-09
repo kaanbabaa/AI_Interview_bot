@@ -1,10 +1,18 @@
+
+import os
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 from llm_handler import LLMHandler
 from cv_parser import extract_text_from_pdf, CVProfile, analyze_github_links, fetch_user_repos, match_repos_locally, get_single_repo_info, fetch_repo_contents_smart
-import os
 import uuid
 from streamlit_ace import st_ace
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
+
+
+
+
 st.set_page_config(page_title = "AI Interview Platform", layout = "wide")
 
 if "stage" not in st.session_state:
