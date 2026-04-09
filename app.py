@@ -4,7 +4,7 @@ from cv_parser import extract_text_from_pdf, CVProfile, analyze_github_links, fe
 import os
 import uuid
 from streamlit_ace import st_ace
-
+os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 st.set_page_config(page_title = "AI Interview Platform", layout = "wide")
 
 if "stage" not in st.session_state:
